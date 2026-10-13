@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program7
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            // Ценность бочек в морских клетках
+            int[] barrelValues = { 120, 85, 210, 99, 305, 170 };
+
+            if (barrelValues.Length == 0)
+            {
+                Console.WriteLine("Нет выловленных бочек.");
+                return;
+            }
+
+            int maxValue = barrelValues[0];
+
+            for (int i = 1; i < barrelValues.Length; i++)
+            {
+                if (barrelValues[i] > maxValue)
+                {
+                    maxValue = barrelValues[i];
+                }
+            }
+
+            Console.WriteLine($"Максимальная ценность среди морских клеток: {maxValue}");
+        }
+    }
+}
